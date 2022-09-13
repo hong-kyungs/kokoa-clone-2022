@@ -32,9 +32,13 @@
     <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
   </header>
 
-  <form id="login-form">
-    <input type="text" placeholder="Email or phone number">
-    <input type="password" placeholder="Password">
+  <!-- 
+    * action - 어떤 페이지로 이 데이터를 보낼 것인지 지정
+    * method - POST or GET, POST는 백엔드 서버에 정보를 전송하는 방식이라 이 프로젝트에서는 사용할 수 없음. GET은 보안에 취약해서 username, password는 GET방식으로 내보내면 안된다. url에 포함되어도 상관없는 정보들을 GET방식으로 내보낸다.
+  -->
+  <form action="friends.html" method="get" id="login-form">
+    <input name="username" type="text" placeholder="Email or phone number">
+    <input name="password" type="password" placeholder="Password">
     <input type="submit" value="Log In">
     <a href="#">Find Kokoa Account or Password</a>
   </form>
